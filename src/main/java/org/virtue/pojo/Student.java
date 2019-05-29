@@ -1,7 +1,7 @@
 package org.virtue.pojo;
 
 import javax.persistence.*;
-
+//pms_tb_admin     admin_id  admin_name    pms_tb_user   user_id use_name
 @Entity
 @Table(name = "tb_student")
 public class Student {
