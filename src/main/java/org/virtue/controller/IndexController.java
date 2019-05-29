@@ -11,6 +11,12 @@ import java.util.ArrayList;
 
 @Controller
 public class IndexController {
+    @RequestMapping(value = "/index", method = {RequestMethod.GET})
+    public String index(){
+
+        return "front/index";
+    }
+
 
     @RequestMapping(value = "/test", method = {RequestMethod.GET})
     public String index(Model model, HttpSession session){

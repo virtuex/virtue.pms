@@ -27,5 +27,5 @@ spring:
     view:
       prefix: classpath:/   # 定位模板的目录
       suffix: .html     # 给返回的页面添加后缀名
-  resources:
-    static-locations: classpath:/static/src/
+#  resources:
+#    static-locations: classpath:/static/src/
