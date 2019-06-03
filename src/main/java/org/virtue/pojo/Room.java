@@ -1,38 +1,52 @@
 package org.virtue.pojo;
 
-/**
- * 房间信息表
- */
-
 import javax.persistence.*;
 
+/**
+ * 客房
+ */
 @Entity
-@Table(name = "tb_room")
+@Table(name = "pms_tb_room")
 public class Room {
     //设置主键并且设置主键为自增
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    //房间id
     @Column(name = "room_id")
+    /**
+     * 宴会厅ID
+     */
     private long roomId;
-    //房间名
-    @Column(name = "roomType_id")
-    private String roomUsername;
-    //房间号
-    @Column(name = "room_num")
-    private int roomNum;
-    //是否预定
-    @Column(name = "room_book")
-    private char book;
-    //是否空
-    @Column(name = "room_empty")
-    private char empty;
-    //是否停用
-    @Column(name = "room_stop")
-    private char stop;
-    //备注
-    @Column(name = "room_remark")
-    private String remark;
+    /**
+     * 名称
+     */
+    @Column(name = "room_name")
+    private String roomName;
+    /**
+     * 面积
+     */
+    @Column(name = "room_area")
+    private int roomArea;
+    /**
+     * 价格
+     */
+    @Column(name = "room_price")
+    private int roomPrice;
+    /**
+     * 类型
+     */
+    @Column(name = "room_type")
+    private String roomType;
+    /**
+     * 介绍
+     */
+    @Column(name = "room_desc")
+    private String roomDesc;
+
+    /**
+     * 图片
+     */
+    @Column(name = "room_image")
+    private String roomImage;
 
     public long getRoomId() {
         return roomId;
@@ -42,53 +56,51 @@ public class Room {
         this.roomId = roomId;
     }
 
-    public String getRoomUsername() {
-        return roomUsername;
+    public String getRoomName() {
+        return roomName;
     }
 
-    public void setRoomUsername(String roomUsername) {
-        this.roomUsername = roomUsername;
+    public void setRoomName(String roomName) {
+        this.roomName = roomName;
     }
 
-    public int getRoomNum() {
-        return roomNum;
+    public int getRoomArea() {
+        return roomArea;
     }
 
-    public void setRoomNum(int roomNum) {
-        this.roomNum = roomNum;
+    public void setRoomArea(int roomArea) {
+        this.roomArea = roomArea;
     }
 
-    public char getBook() {
-        return book;
+    public int getRoomPrice() {
+        return roomPrice;
     }
 
-    public void setBook(char book) {
-        this.book = book;
+    public void setRoomPrice(int roomPrice) {
+        this.roomPrice = roomPrice;
     }
 
-    public char getEmpty() {
-        return empty;
+    public String getRoomType() {
+        return roomType;
     }
 
-    public void setEmpty(char empty) {
-        this.empty = empty;
+    public void setRoomType(String roomType) {
+        this.roomType = roomType;
     }
 
-    public char getStop() {
-        return stop;
+    public String getRoomDesc() {
+        return roomDesc;
     }
 
-    public void setStop(char stop) {
-        this.stop = stop;
+    public void setRoomDesc(String roomDesc) {
+        this.roomDesc = roomDesc;
     }
 
-    public String getRemark() {
-        return remark;
+    public String getRoomImage() {
+        return roomImage;
     }
 
-    public void setRemark(String remark) {
-        this.remark = remark;
+    public void setRoomImage(String roomImage) {
+        this.roomImage = roomImage;
     }
-
-
 }

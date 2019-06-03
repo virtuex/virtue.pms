@@ -1,47 +1,57 @@
 package org.virtue.pojo;
 
-/**
- * 宴会厅信息表
- */
-
 import javax.persistence.*;
 
+/**
+ * 宴会厅
+ */
 @Entity
-@Table(name = "tb_hall")
+@Table(name = "pms_tb_hall")
 public class Hall {
     //设置主键并且设置主键为自增
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    //宴会厅id
+    @GeneratedValue(strategy= GenerationType.AUTO)
     @Column(name = "hall_id")
+    /**
+     * 宴会厅ID
+     */
     private long hallId;
-    //宴会厅类型
+
+    /**
+     * 名称
+     */
+    @Column(name = "hall_name")
+    private String hallName;
+    /**
+     * 价格
+     */
+    @Column(name = "hall_price")
+    private int hallPrice;
+    /**
+     * 图片
+     */
+    @Column(name = "hall_image_path")
+    private String hallImagePath;
+    /**
+     * 类型
+     */
     @Column(name = "hall_type")
     private String hallType;
-    //宴会厅号
-    @Column(name = "hall_num")
-    private int hallNum;
-    //是否预定
-    @Column(name = "hall_book")
-    private char book;
-    //是否空
-    @Column(name = "hall_empty")
-    private char empty;
-    //是否停用
-    @Column(name = "hall_stop")
-    private char stop;
-    //单价
-    @Column(name = "hall_price")
-    private float hallPrice;
-    //桌子数量
-    @Column(name = "hall_tableNum")
-    private int hallTableNum;
-    //最大人数
-    @Column(name = "hall_maxNumber")
-    private int hallMaxNumber;
-    //备注
-    @Column(name = "hall_remark")
-    private String remark;
+    /**
+     * 介绍
+     */
+    @Column(name = "hall_desc")
+    private String hallDesc;
+    /**
+     * 面积
+     */
+    @Column(name = "hall_area")
+    private int hallArea;
+    /**
+     * 座位数
+     */
+    @Column(name = "hall_site_num")
+    private int hallSiteNum;
 
     public long getHallId() {
         return hallId;
@@ -49,6 +59,30 @@ public class Hall {
 
     public void setHallId(long hallId) {
         this.hallId = hallId;
+    }
+
+    public String getHallName() {
+        return hallName;
+    }
+
+    public void setHallName(String hallName) {
+        this.hallName = hallName;
+    }
+
+    public int getHallPrice() {
+        return hallPrice;
+    }
+
+    public void setHallPrice(int hallPrice) {
+        this.hallPrice = hallPrice;
+    }
+
+    public String getHallImagePath() {
+        return hallImagePath;
+    }
+
+    public void setHallImagePath(String hallImagePath) {
+        this.hallImagePath = hallImagePath;
     }
 
     public String getHallType() {
@@ -59,67 +93,27 @@ public class Hall {
         this.hallType = hallType;
     }
 
-    public int getHallNum() {
-        return hallNum;
+    public String getHallDesc() {
+        return hallDesc;
     }
 
-    public void setHallNum(int hallNum) {
-        this.hallNum = hallNum;
+    public void setHallDesc(String hallDesc) {
+        this.hallDesc = hallDesc;
     }
 
-    public char getBook() {
-        return book;
+    public int getHallArea() {
+        return hallArea;
     }
 
-    public void setBook(char book) {
-        this.book = book;
+    public void setHallArea(int hallArea) {
+        this.hallArea = hallArea;
     }
 
-    public char getEmpty() {
-        return empty;
+    public int getHallSiteNum() {
+        return hallSiteNum;
     }
 
-    public void setEmpty(char empty) {
-        this.empty = empty;
-    }
-
-    public char getStop() {
-        return stop;
-    }
-
-    public void setStop(char stop) {
-        this.stop = stop;
-    }
-
-    public float getHallPrice() {
-        return hallPrice;
-    }
-
-    public void setHallPrice(float hallPrice) {
-        this.hallPrice = hallPrice;
-    }
-
-    public int getHallTableNum() {
-        return hallTableNum;
-    }
-
-    public void setHallTableNum(int hallTableNum) {
-        this.hallTableNum = hallTableNum;
-    }
-
-    public int getHallMaxNumber() {
-        return hallMaxNumber;
-    }
-
-    public void setHallMaxNumber(int hallMaxNumber) {
-        this.hallMaxNumber = hallMaxNumber;
-    }
-
-    public String getRemark() {
-        return remark;
-    }
-
-    public void setRemark(String remark) {
-        this.remark = remark;
+    public void setHallSiteNum(int hallSiteNum) {
+        this.hallSiteNum = hallSiteNum;
     }
 }

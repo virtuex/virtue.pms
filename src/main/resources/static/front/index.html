@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
 <title>Home</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,7 +23,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="header">
 			<div class="container">
 				<div class="logo">
-					<h1><a href="index.html">Motel</a></h1>
+					<h1><a th:text="${session.hotel_name}" href="index.html">酒店名称</a></h1>
 				</div>
 					<nav class="navbar navbar-default" role="navigation">
 						<div class="navbar-header">
@@ -37,12 +37,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<!--/.navbar-header-->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav">
-								<li class="active"><a href="index.html">Home</a></li>
-								<li><a href="rooms.html">Rooms</a></li>
-								<li><a href="offers.html">Offers</a></li>
-								<li><a href="shortcodes.html">Short Codes</a></li>
-								<li><a href="signin.html">Sign In</a></li>
-								<li><a href="contact.html">Contact</a></li>
+								<li class="active"><a href="index.html">主页</a></li>
+								<li><a href="rooms.html">客房</a></li>
+								<li><a href="offers.html">宴会厅</a></li>
+								<li><a href="signin.html">会员登陆</a></li>
+								<li><a href="contact.html">联系我们</a></li>
 							</ul>
 						</div>
 						<!--/.navbar-collapse-->
@@ -115,7 +114,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div> 
 					<div class="col-md-2 submit_button"> 
 						<form action="details.html">
-							<input type="submit" value="Search">
+							<input type="submit" value="查询">
 						</form>
 					</div>
 					<div class="clearfix"> </div>
